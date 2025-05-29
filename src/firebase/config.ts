@@ -2,7 +2,6 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB47CvmzxfDBskNWRCO-NPuh01xHhJvSY4",
   authDomain: "react-e-commerce-app-49b40.firebaseapp.com",
@@ -13,10 +12,8 @@ const firebaseConfig = {
   measurementId: "G-KE5476Z2M0"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Initialize Firebase services
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 

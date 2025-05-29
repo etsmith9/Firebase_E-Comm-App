@@ -88,7 +88,7 @@ const ShoppingCart = () => {
           onClick={handleCheckout}
           className="checkout-btn"
         >
-          Proceed to Checkout
+          Place Order
         </button>
       </div>
     </div>

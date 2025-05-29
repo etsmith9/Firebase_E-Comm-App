@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@firebase/auth": "^1.10.6",
+    "@firebase/firestore": "^4.7.16",
     "@reduxjs/toolkit": "^2.8.2",
     "@tanstack/react-query": "^5.76.1",
+    "firebase": "^11.8.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",

@@ -24,7 +24,6 @@ const Orders = () => {
   }
 
   if (error) {
-    // Check if the error is related to index building
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     const isIndexError = errorMessage.includes('requires an index');
     

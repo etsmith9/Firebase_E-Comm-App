@@ -13,7 +13,6 @@ import {
 } from 'firebase/firestore';
 import { db } from '../firebase/config';
 
-// User operations
 export const createUser = async (userId: string, userData: any) => {
   await setDoc(doc(db, 'users', userId), userData);
 };
@@ -33,7 +32,6 @@ export const deleteUser = async (userId: string) => {
   await deleteDoc(doc(db, 'users', userId));
 };
 
-// Product operations
 export const getProducts = async () => {
   const productsRef = collection(db, 'products');
   const q = query(productsRef, orderBy('createdAt', 'desc'));
@@ -69,7 +67,6 @@ export const deleteProduct = async (productId: string) => {
   await deleteDoc(doc(db, 'products', productId));
 };
 
-// Order operations
 export const createOrder = async (userId: string, orderData: any) => {
   const ordersRef = collection(db, 'orders');
   const newOrderRef = doc(ordersRef);

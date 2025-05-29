@@ -60,7 +60,7 @@ export default function Products() {
   const handleAddToCart = (product: Product) => {
     addToCart(product);
     setAddedProductId(product.id);
-    setTimeout(() => setAddedProductId(null), 2000); // Reset after 2 seconds
+    setTimeout(() => setAddedProductId(null), 2000);
   };
 
   if (isLoading) return <div>Loading...</div>;

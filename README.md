@@ -1,50 +1,61 @@
-# React + TypeScript + Vite
+Knowledge Check - Implement Firebase into React E-Commerce App
+Implement Firebase into React E-Commerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this assignment, you will extend your eCommerce app by integrating Firebase for product management and user orders. You'll replace the previous FakeStore API with Firestore for managing products and implement Firebase to store and manage user orders.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Part 1: Firebase Setup
+Configure Firebase in Your Project:
+Create a Firebase project in the Firebase console.
+Add your eCommerce app to the Firebase project.
+Install and configure the Firebase SDK in your app.
+Enable Firebase Authentication and Firestore in the Firebase console.
 
-## Expanding the ESLint configuration
+Part 2: Firebase Authentication
+User Registration:
+Implement user registration with email and password using Firebase Authentication.
+Automatically create a corresponding user document in the users collection in Firestore upon registration.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Login and Logout:
+Allow users to log in with their email and password.
+Add a logout feature to sign users out securely.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Part 3: User Management
+Migrate CRUD Operations to Firestore:
+Replace any existing CRUD operations for user data with Firestore. Required functionalities:
+Create: Add a new user document to Firestore when a user registers.
+Read: Fetch and display user profile information.
+Update: Allow users to update their profile details, such as name and address.
+Delete: Enable users to delete their account and all associated data from Firestore.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Part 4: Product Management
+Replace FakeStore API:
+Create a products collection in Firestore to store product details.
 
-```js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+CRUD Operations for Products:
+Fetch all products from the products collection to display in the store.
+Add functionality for users to:
+Create new products.
+Update existing product details (e.g., price, description, stock).
+Delete products from the store.
 
-export default tseslint.config({
-  plugins: {
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Part 5: Order Management
+Create Orders:
+When users place an order, save the details in an orders collection in Firestore.
+Each order should include:
+A reference to the user who placed the order.
+Details of the products in the order (e.g., IDs, quantities, total price).
+The order’s creation timestamp.
+Order History:
+Allow users to view a list of their past orders.
+Fetch order history from the orders collection, displaying:
+Order ID
+Date of creation
+Total price
+Enable users to click on an order to see full details, including the list of products and the total cost.
+
+GitHub Repository:
+You are free to create another repository or update the existing Module 8 E-commerce repo.
+Submission
+Upon completing the project, submit your code, including all source code files, and the README.md file in your GitHub repository to Google Classroom.
+

@@ -1,43 +1,28 @@
-Part 1: Firebase Setup
-Configure Firebase in Your Project:
-Create a Firebase project in the Firebase console.
-Add your eCommerce app to the Firebase project.
-Install and configure the Firebase SDK in your app.
-Enable Firebase Authentication and Firestore in the Firebase console.
-Part 2: Firebase Authentication
-User Registration:
-Implement user registration with email and password using Firebase Authentication.
-Automatically create a corresponding user document in the users collection in Firestore upon registration.
-Login and Logout:
-Allow users to log in with their email and password.
-Add a logout feature to sign users out securely.
-Part 3: User Management
-Migrate CRUD Operations to Firestore:
-Replace any existing CRUD operations for user data with Firestore. Required functionalities:
-Create: Add a new user document to Firestore when a user registers.
-Read: Fetch and display user profile information.
-Update: Allow users to update their profile details, such as name and address.
-Delete: Enable users to delete their account and all associated data from Firestore.
-Part 4: Product Management
-Replace FakeStore API:
-Create a products collection in Firestore to store product details.
-CRUD Operations for Products:
-Fetch all products from the products collection to display in the store.
-Add functionality for users to:
-Create new products.
-Update existing product details (e.g., price, description, stock).
-Delete products from the store.
-Part 5: Order Management
-Create Orders:
-When users place an order, save the details in an orders collection in Firestore.
-Each order should include:
-A reference to the user who placed the order.
-Details of the products in the order (e.g., IDs, quantities, total price).
-The order’s creation timestamp.
-Order History:
-Allow users to view a list of their past orders.
-Fetch order history from the orders collection, displaying:
-Order ID
-Date of creation
-Total price
-Enable users to click on an order to see full details, including the list of products and the total cost.
+Implementing CI/CD Pipeline for React E-Commerce App
+The e-commerce project, developed in Module 12, requires a streamlined Continuous Integration and Continuous Deployment (CI/CD) pipeline for optimal performance. This pipeline should automate the process of building, testing, and deploying the application to Vercel, a cloud platform. Key components include setting up a robust CI/CD workflow using GitHub Actions and implementing unit tests for application reliability. 
+
+
+
+Implementing Test-Driven Development (TDD) in React:
+Unit Testing:
+Write at least two unit tests (separate components)
+Test component rendering, state changes, and user interactions.
+Ensure tests are focused, independent, and deterministic.
+
+Integration Testing:
+Conduct an integration test to ensure the Cart gets updated when adding a product 
+Simulate user interactions and assert resulting changes using React Testing Library.
+
+Implement a Continuous Integration (CI) flow of build and test in GitHub Actions:
+Create a main.yml file within the .github/workflows directory to define the CI workflow.
+Configure the workflow to automatically trigger code pushes to the main branch.
+Use GitHub Actions to build the project and run unit tests using Jest.
+Ensure that the workflow fails if any tests fail, preventing the deployment of faulty code.
+
+Implement a Continuous Deployment (CD) flow in GitHub Actions with deployment to Vercel:
+Extend the existing GitHub Actions workflow to include a deployment stage.
+Define deployment jobs to deploy the application to Vercel.
+Ensure that the deployment only occurs after the CI tests have passed successfully.
+Submission
+With that, your project should be deployed and hosted via Vercel!  Submit the updated GitHub link with a README.md that includes a link to your live E-commerce application!
+
